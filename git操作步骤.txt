@@ -1,0 +1,39 @@
+1.设置 SSH Key
+  $ ssh-keygen -t rsa -C "用户的邮箱"
+    Generating public/private rsa key pair.
+    Enter file in which to save the key
+    (/Users/your_user_directory/.ssh/id_rsa): 按回车键
+    Enter passphrase (empty for no passphrase): 输入密码
+    Enter same passphrase again: 再次输入密码
+    Your identification has been saved in /Users/your_user_directory/.ssh/id_rsa.
+    Your public key has been saved in /Users/your_user_directory/.ssh/id_rsa.pub.
+    The key fingerprint is:
+    fingerprint值 your_email@example.com
+    The key's randomart image is:
+    注：id_rsa 文件是私有密钥，id_rsa.pub 是公开密钥
+  $ cat ~/.ssh/id_rsa.pub
+    ssh-rsa 公开密钥的内容 your_email@example.com
+  把私密copy到用户中的ssh keys 
+  ssh -T git@github.com
+  显示The authenticity of host 'github.com (207.97.227.239)' can't be established.
+  RSA key fingerprint is fingerprint值 .
+  Are you sure you want to continue connecting (yes/no)? 输入yes 
+  Hi hirocastest! You've successfully authenticated, but GitHub does not 
+  provide shell access.证明链接成功
+  
+
+2.---将本地文件推送到远程仓库
+1.创建一个仓库在githup勾选在 Initialize this repository with a README 选项上打钩，随后GitHub 会自动初始化仓库并设置 README 文件，让用户可以立刻clone 这个仓库  。如果想向 GitHub 添加手中已有的 Git 仓库，建议不要勾选，直接手动 push。
+2.clone 仓库
+  git clone 远程仓库的地址---->>>>>将远程仓库copy到本地
+3.将本地项目放到当前仓库中（clone到本地的）
+4.git add 文件名 //将文件放到缓冲区
+5.git commit -m '注释内容' //将文件进行提交   但没真正的提交
+6.git push    //将文件推送到远程仓库
+
+
+3.-----本地文件修改后  更新远程仓库并提交
+  1.git add 项目名   //将文件放到缓冲区
+  2.git pull  //跟新远程仓库
+  3.git commit -m '注释内容' //将文件进行提交   但没真正的提交
+  4.git push    //将文件推送到远程仓库
