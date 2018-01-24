@@ -23,13 +23,13 @@
   
 
 2.---将本地文件推送到远程仓库
-1.创建一个仓库在githup勾选在 Initialize this repository with a README 选项上打钩，随后GitHub 会自动初始化仓库并设置 README 文件，让用户可以立刻clone 这个仓库  。如果想向 GitHub 添加手中已有的 Git 仓库，建议不要勾选，直接手动 push。
-2.clone 仓库
-  git clone 远程仓库的地址---->>>>>将远程仓库copy到本地
-3.将本地项目放到当前仓库中（clone到本地的）
-4.git add 文件名 //将文件放到缓冲区
-5.git commit -m '注释内容' //将文件进行提交   但没真正的提交
-6.git push    //将文件推送到远程仓库
+	1.创建一个仓库在githup勾选在 Initialize this repository with a README 选项上打钩，随后GitHub 会自动初始化仓库并设置 README 文件，让用户可以立刻clone 这个仓库  。如果想向 GitHub 添加手中已有的 Git 仓库，建议不要勾选，直接手动 push。
+	2.clone 仓库
+	  git clone 远程仓库的地址---->>>>>将远程仓库copy到本地
+	3.将本地项目放到当前仓库中（clone到本地的）
+	4.git add 文件名 //将文件放到缓冲区
+	5.git commit -m '注释内容' //将文件进行提交   但没真正的提交
+	6.git push    //将文件推送到远程仓库
 
 
 3.-----本地文件修改后  更新远程仓库并提交
